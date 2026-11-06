@@ -4,8 +4,8 @@
 ![alt text](image-1.png)
 AWS requires specific credentials based on how you connect and who you are.
 - **Human vs. Machine Identities:**
-	- Console Access: Requires a username and password.
-	- Programmatic Access (SDKs/CLI): Requires access keys (Access Key ID and Secret Access Key) or temporary security credentials via AWS STS (Security Token Service).
+	- **Console Access:** Requires a username and password.
+	- **Programmatic Access (SDKs/CLI):** Requires access keys (Access Key ID and Secret Access Key) or temporary security credentials via AWS STS (Security Token Service).
 - **Identity Categories:** Account root user, IAM user, AWS IAM Identity Center, and Federated identities.
 
 ### 2. On-Premises to AWS Programmatic Access
@@ -16,10 +16,10 @@ AWS requires specific credentials based on how you connect and who you are.
 ### 3. Deep Dive: IAM Policies & Least Privilege
 
 - **AWS Managed Policies (Example: AWSCodeCommitPowerUser):**
-	- What it allows: Full functionality of CodeCommit and repository-related resources, including the ability to directly push code to the main branch without a pull request.
-	- What it blocks: Deleting repositories or creating/deleting unrelated resources.
-	- Security Flaw: Allowing direct pushes to the main branch fails the principle of least privilege.
-	- Modification: You cannot modify an AWS Managed Policy. To restrict it, you must attach a separate policy with a Deny rule to the IAM entity.
+	- **What it allows:** Full functionality of CodeCommit and repository-related resources, including the ability to directly push code to the main branch without a pull request.
+	- **What it blocks:** Deleting repositories or creating/deleting unrelated resources.
+	- **Security Flaw:** Allowing direct pushes to the main branch fails the principle of least privilege.
+	- **Modification:** You cannot modify an AWS Managed Policy. To restrict it, you must attach a separate policy with a Deny rule to the IAM entity.
 - **Permissions Boundaries:** An advanced feature using a managed policy to set the maximum allowable permissions that an identity-based policy can grant to an IAM entity.
 
 ### 4. Scaling Access Management & Governance

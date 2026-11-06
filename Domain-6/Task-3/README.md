@@ -21,7 +21,7 @@ Before deploying solutions, you must define what application behavioral data, me
 2. The Measurement Approach: How data is gathered, aggregated, and calculated.
 3. The Priority: The urgency level assigned to the metric.
 ```
-🚨 **Action Item:** Once metrics are defined, build proactive alarms and notifications (e.g., via Amazon CloudWatch and SNS) to automatically handle issues and security incidents.
+🚨 Action Item: Once metrics are defined, build proactive alarms and notifications (e.g., via Amazon CloudWatch and SNS) to automatically handle issues and security incidents.
 ```
 ### 2. Walkthrough Scenarios & Architecture Solutions
 

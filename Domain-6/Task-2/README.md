@@ -8,7 +8,7 @@ Automating processes (builds, tests, deployments) reduces security gaps and acce
 	- Used to centrally implement patching, remediate compliance drift (e.g., VPC configurations, S3 bucket policies), and manage resources at scale.
 - **AWS Config:**
 	- Monitors resource compliance and applies automated remediations using SSM Automation runbooks.
-	- Scenario: To monitor and ensure all S3 buckets remain private, the best solution is combining AWS Config with an Amazon EventBridge rule to alert the security team upon policy violations (SCPs alone do not track compliance drift).
+	- **Scenario:** To monitor and ensure all S3 buckets remain private, the best solution is combining AWS Config with an Amazon EventBridge rule to alert the security team upon policy violations (SCPs alone do not track compliance drift).
 - **AWS Security Hub:**
 	- Aggregates findings and sends them to EventBridge as events. Supports custom actions for specific insights, allowing integration with AWS Lambda for automated remediation.
 - **AWS Control Tower:**
@@ -18,7 +18,7 @@ Automating processes (builds, tests, deployments) reduces security gaps and acce
 - **AWS Firewall Manager:**
 	- Used for centralized security management across an entire organization rather than a few specific accounts.
 	- Provides centralized monitoring of DDoS attacks and automatically applies protections to new accounts/resources.
-	- Integrates with: AWS WAF (Managed & Custom Rules), AWS Shield Advanced, Security Groups, AWS Network Firewall, and Route 53 Resolver DNS Firewall.
+	- **Integrates with:** AWS WAF (Managed & Custom Rules), AWS Shield Advanced, Security Groups, AWS Network Firewall, and Route 53 Resolver DNS Firewall.
 
 ### 2. Sensitive Data Discovery & Classification
 ![alt text](image-1.png)
@@ -85,7 +85,7 @@ Both services support symmetric and asymmetric encryption, but have key operatio
 
 ![alt text](image-6.png)
 - **Envelope Encryption**: The practice of encrypting plaintext data with a Data Encryption Key (DEK), and then encrypting the DEK under a root Key Encryption Key (KEK).
-- **To encrypt data locally**, use the KMS GenerateDataKey API operation, use the plaintext key to encrypt the data, erase the plaintext key from memory, and store the encrypted DEK alongside the encrypted data.
+- To encrypt data locally, use the **KMS GenerateDataKey API** operation, use the plaintext key to encrypt the data, erase the plaintext key from memory, and store the encrypted DEK alongside the encrypted data.
 
 ### 6. Certificate & Access Management
 ![alt text](image-8.png)
